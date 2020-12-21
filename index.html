@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Among Us</title>
+    <script src="js/index.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+
+    <!-- Bootstrap Navbar -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- fallsnow -->
+  <script src="js/snowstorm.js"></script>
+
+</head>
+
+<script>
+
+  // 研究中 滾輪顯示
+  // $(function() {
+  //   var $gotopbtn = $('#gototop');
+  //   var $scrollTop = window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop;
+  //   if ($scrollTop > 10) {
+  //     $gotopbtn.style.display = 'block';
+  //   }
+  //   else {
+  //     $gotobtn.style.display = 'none';
+  //   }
+
+  // });
+
+</script>
+
+<body>
+  <!-- Preloader -->
+  <div class="preloader">
+    <img src="gif/preloader.gif" alt="">
+    <div class="txt">載入中．．．</div>
+
+  </div>
+
+  <!-- gototop -->
+  <button class="totop" id="gototop">TOP</button>
+
+
+  <!-- container -->
+  <div class="container">
+    <!-- 電腦導覽列 -->
+    <section class="topicon">
+      <div class="row">
+        <div class="col-md-4"><img src="img/left.jpg" alt=""></div>
+        <div class="col-md-7">
+          <div class="row">
+            <div class="col-md-12 iconsearch">
+              <a href="#">首頁</a>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><img src="img/search.png" alt=""></button>
+              </form>
+            </div>
+            <div class="col-md-12">
+              <a href="#">新玩家</a>
+              <a href="#">老手</a>
+              <a href="#">回歸玩家</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1"><img src="img/right.jpg" alt=""></div>
+      </div>
+    </section>
+    <!-- 手機導覽列 -->
+    <section class="topicon-phone">
+      <div class="row">
+        <div class="col-12 phone-top"><img src="img/left.jpg" alt=""></div>
+        <div class="col-12">
+          <div class="row">
+            <div class="col-10">
+              <div class="col-12 iconsearch">
+                <a href="#">首頁</a>
+                <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><img src="img/search.png" alt=""></button>
+                </form>
+              </div>
+              <div class="col-12">
+                <a href="#">新玩家</a>
+                <a href="#">老手</a>
+                <a href="#">回歸玩家</a>
+              </div>
+            </div>
+            <div class="col-2"><img src="img/right.jpg" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="main_navbar">
+      <a class="navbar-brand" href="#"><img src="img/navbar.png" alt=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">首頁</a>
+          </li>
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              遊戲玩法
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">公平玩法</a>
+              <a class="dropdown-item" href="#">壞人增強玩法</a>
+              <a class="dropdown-item" href="#">好人增強玩法</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              特殊玩法(自定義規則)
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Hide & Seek</a>
+              <a class="dropdown-item" href="#">Slasher Mode</a>
+              <div class="coming">思索中</div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">常規術語</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">任務</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">製作公司</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              地圖
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">THE SKELD</a>
+              <a class="dropdown-item" href="#">MIRA HQ</a>
+              <a class="dropdown-item" href="#">POLUS</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">設定中文化</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              參考實況主影片
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">巧克力</a>
+              <a class="dropdown-item" href="#">阿神</a>
+              <a class="dropdown-item" href="#">PewDiePie</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">關於我們</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Carousel -->
+    <section id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/map00.jpg" class="d-block" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="img/map01.jpg" class="d-block" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="img/map02.jpg" class="d-block" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="img/map03.jpg" class="d-block" alt="...">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"><img src="img/left-arrow.png"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"><img src="img/right-arrow.png"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </section>
+    <section class="news">
+      <div class="row">
+        <div class="col-12 Importantnews">
+          <div class="row">
+            <div class="col-lg-10 col-12 Importanttxt">Important News</div>
+            <div class="col-lg-2 col-12 Importantbtn">
+              <button class="btn">More News</button>
+            </div>
+          </div>
+        </div>
+        <div class="newsstyle col-12 col-xl-3 col-md-6">
+          <a href="#" class="touchnews">
+            <img src="img/map01(vent).jpg" alt="">
+            <div class="newstxt">
+              <div class="title">Among us 地道篇</div>
+              <div class="txt">總是在The skeld殺不到人，還是一直被殺嗎？不是你不會玩，而是你缺少一份完...</div>
+            </div>
+          </a>
+        </div>
+        <div class="newsstyle col-12 col-xl-3 col-md-6">
+          <a href="#" class="touchnews">
+            <img src="img/destroy.jpg" alt="">
+            <div class="newstxt">
+              <div class="title">Among us 破壞篇</div>
+              <div class="txt">殺不完 贏不了，破壞設備了也沒辦法殺到人，那你知道嗎？氧氣和電力是在相反方...</div>
+            </div>
+          </a>
+        </div>
+        <div class="newsstyle col-12 col-xl-3 col-md-6">
+          <a href="#" class="touchnews">
+            <img src="img/crewmate.jpg" alt="">
+            <div class="newstxt">
+              <div class="title">Among us 船員(Crewmate)篇</div>
+              <div class="txt">進去不知要幹嘛？常常解任務解到一半被殺，或者拍桌討論時專業術語看不懂，以...</div>
+            </div>
+          </a>
+        </div>
+        <div class="newsstyle col-12 col-xl-3 col-md-6">
+          <a href="#" class="touchnews">
+            <img src="img/task.jpg" alt="">
+            <div class="newstxt">
+              <div class="title">Among us 任務篇</div>
+              <div class="txt">全英文看不懂，任務太多太難記，明明照著做任務卻解不了？趕緊來補習，瑋瑋為大...</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Homework -->
+    <!-- <div class="row col-md-12">
+      <div class="format txt col-2"><img src="img/red.png" alt=""></div>
+      <div class="format txt col-1"><img src="img/lime.png" alt=""></div>
+      <div class="format txt col-1"><img src="img/brown.png" alt=""></div>
+      <div class="format txt col-1"><img src="img/black.png" alt=""></div>
+      <div class="format txt col-1"><img src="img/pink.png" alt=""></div>
+      <div class="format txt col-1"><img src="img/dark-blue.png" alt=""></div>
+      <div class="format txt col-1"><img src="img/dark-green.png" alt=""></div>
+      <div class="format txt col-1"><img src="img/purple.png" alt=""></div>
+      <div class="format txt col-1"><img src="img/yellow.png" alt=""></div>
+      <div class="format txt col-2"><img src="img/white.png" alt=""></div>
+      <div class="row hw col-md-12">
+        <div class="format format-1 col-md-6">
+          <div class="format meet"><img src="img/meeting.png" alt=""></div>
+          <div class="format txt">緊急會議</div>
+        </div>
+        <div class="format col-md-6 col-12">
+          <div class="row">
+            <div class="format col-md-4 col-6"><img src="img/black.png" alt=""></div>
+            <div class="format col-md-4 col-6"><img src="img/black.png" alt=""></div>
+            <div class="format col-md-4 col-6"><img src="img/black.png" alt=""></div>
+            <div class="format col-md-4 col-6"><img src="img/black.png" alt=""></div>
+            <div class="format col-md-4 col-6"><img src="img/black.png" alt=""></div>
+            <div class="format col-md-4 col-6"><img src="img/black.png" alt=""></div>
+            <div class="format col-md-4 col-6"><img src="img/black.png" alt=""></div>
+            <div class="format col-md-4 col-6"><img src="img/black.png" alt=""></div>
+            <div class="format col-md-4 col-6"><img src="img/black.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+  
+  <footer>
+    <div class="ftwidth">
+      <div class="txt">
+        <div class="opinion">歡迎各位有意見的出來共，E-mail在下面，敢不敢約</div>
+        <div class="mail">1108211005@gap.wzu.edu.tw</div>
+        <div class="copyright">Copyright © 2020 Danny. All rights reserved.</div>
+      </div>
+      <div class="qr"><img src="img/qr.png" alt=""></div>
+    </div>
+  </footer>
+</body>
+</html>
+
+<script>
+
+// gotop按鈕執行
+$(function() {
+    var $gotopbtn = $('#gototop');
+    $gotopbtn.click(function() {
+      $('html, body').animate({scrollTop: 0}, 'slow');
+    });
+});
+
+// gotop按鈕執行
+
+// gotop按鈕消失顯示
+window.onscroll = function() {scroll()};
+
+function scroll() {
+  var scrollTop = window.pageYOffset /*此處為Safari*/|| document.documentElement.scrollTop /*此處為Chrome*/|| document.body.scrollTop /*此處為IE和FireFox*/;
+  // var $gotopbtn = $('#gototop');
+  
+  if (scrollTop > 10 ) {
+    document.getElementById('gototop').style.display = 'block';
+  } 
+  else {
+    document.getElementById('gototop').style.display = 'none';
+  }
+}
+
+// gotop按鈕消失顯示
+
+// 進入網頁載入動畫
+
+    ;(function($) {
+      "use strict"; 
+      // Preloader JS 
+      function preloader(){
+          if( $('.preloader').length ){
+              $(window).on('load', function() {
+                  $('.preloader').fadeOut();
+                  $('.preloader').delay(50).fadeOut('slow');  
+              }) 
+          }
+      }
+      /*Function Calls*/
+      preloader();
+    })(jQuery);
+
+// 進入網頁載入動畫
+
+
+
+  </script>
